@@ -1,5 +1,7 @@
+import { AllQuestions } from './../models/all-questions';
 import { Question } from '../models/question';
 import { Answer } from '../models/answer';
+import { initialAnswers } from './quiz.helpers';
 
 export const QuizFeatureKey = 'quiz';
 
@@ -9,6 +11,6 @@ export interface QuizState {
 }
 
 export const initialState: QuizState = {
-    questions: [], 
-    answers: []
+    questions: AllQuestions, 
+    answers: initialAnswers(AllQuestions.length)
 }
