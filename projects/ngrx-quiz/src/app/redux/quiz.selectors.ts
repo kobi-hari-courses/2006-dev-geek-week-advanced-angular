@@ -14,3 +14,8 @@ export const selectCurrentQuestion = createSelector(
     selectCurrentQuestionIndex, 
     (state, index) => state.questions[index]
 );
+
+export const selectAllAnswers = createSelector(
+    selectState, 
+    state => state.answers
+);
