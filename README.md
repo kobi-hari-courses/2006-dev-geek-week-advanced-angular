@@ -19,7 +19,7 @@ Specifically:
 - [**redux-pop-quiz**](https://github.com/kobi2294/DevGeekWeek2020-Angular/tree/master/projects/redux-pop-quiz) - A "Multiple Question" quiz implemented using NgRx and Material
 
 ### Presentation and Video
-- [**A Video of the second demo**](https://www.dropbox.com/s/u7tmy6bikyx47vn/ORACLE%20WEEK%202019.mp4?dl=0)
+- [**A Video of the second demo**](https://www.dropbox.com/s/ufiox0t3d359zz2/Dev%20geek%20week%202020.mp4?dl=0)
 - [**The Presentation**](https://github.com/kobi2294/DevGeekWeek2020-Angular/blob/master/presentations/Presentation.pdf)
 
 ## Some relevant links
