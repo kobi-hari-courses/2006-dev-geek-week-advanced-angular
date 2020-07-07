@@ -4,5 +4,22 @@
 @include mat-core();
 @include angular-material-theme($theme);
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { 
+    height: 100%; 
+    width: 100%;
+}
+
+body { 
+    display: grid;
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;        
+}
+
+div {
+    display: grid;
+}
