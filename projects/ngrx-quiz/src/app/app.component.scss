@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     padding: 8px;
-}
+    background: var(--b-background);
+    margin: 8px;}
 
 div {
     display: flex;
@@ -23,4 +24,30 @@ button {
 span {
     font-size: 24px;
     margin: 4px;
+}
+
+.buttons {
+    background: var(--p100);
+}
+
+.icons {
+    background: var(--p200);
+}
+
+.texts {
+    background: var(--b-card);
+
+    .primary {
+        background: var(--p100);
+        color: var(--p900);
+        padding: 4px;
+        margin: 4px;
+    }
+
+    .accent {
+        background: var(--a100);
+        color: var(--a700);
+        padding: 4px;
+        margin: 4px;
+    } 
 }
