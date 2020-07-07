@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Question } from 'src/app/models/question';
+import { Store } from '@ngrx/store';
+import { QuizSelectors } from 'src/app/redux/quiz.types';
 
 @Component({
   selector: 'app-question-presenter',
@@ -6,18 +10,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./question-presenter.component.scss']
 })
 export class QuestionPresenterComponent implements OnInit {
-  caption: string = 'What do you get when you mix red and yellow';
-  answers: string[] = [
-    'White', 
-    'Orange', 
-    'Pink', 
-    'Green'
-  ];
-
-
-  constructor() { }
+  question$: Observable<Question>;
+  
+  constructor(private store: Store<any>) { }
 
   ngOnInit() {
+    this.question$ = this.store.select(QuizSelectors.selectCurrentQuestion);
   }
 
 }
