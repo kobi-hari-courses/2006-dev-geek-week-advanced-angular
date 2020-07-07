@@ -1,3 +1,5 @@
+import { quizReducer } from './redux/quiz.reducer';
+import { QuizFeatureKey } from './redux/quiz.model';
 import { AppMaterialModule } from './app-material.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -8,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProgressComponent } from './components/progress/progress.component';
 import { QuestionPresenterComponent } from './components/question-presenter/question-presenter.component';
 import { QuizDoneComponent } from './components/quiz-done/quiz-done.component';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,8 @@ import { QuizDoneComponent } from './components/quiz-done/quiz-done.component';
     BrowserModule,
     AppRoutingModule,
     AppMaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule, 
+    StoreModule.forRoot({[QuizFeatureKey]: quizReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]
