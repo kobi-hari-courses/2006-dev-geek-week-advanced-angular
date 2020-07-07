@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { QuizActions } from './redux/quiz.types';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ngrx-quiz';
-}
+  constructor(private store: Store<any>){}
+
+  reset() {
+    this.store.dispatch(QuizActions.reset());
+  }}
