@@ -14,6 +14,10 @@ export function initialAnswers(count: number): Answer[] {
     return res;
 }
 
+export function isQuizDone(state: QuizState): boolean {
+    return (state.answers.filter(a => a.userAnswer === null).length === 0);
+}
+
 export function answerCurrentQuestion(state: QuizState, answer: number): QuizState {
     const curQuestionIndex = state.answers.findIndex(answer => answer.userAnswer === null);
     const curQuestion = state.questions[curQuestionIndex];

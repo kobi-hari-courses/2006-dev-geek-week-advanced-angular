@@ -1,5 +1,6 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { QuizState, QuizFeatureKey } from './quiz.model';
+import { isQuizDone } from './quiz.helpers';
 
 export const selectState = 
     createFeatureSelector<QuizState>(QuizFeatureKey);
@@ -18,4 +19,9 @@ export const selectCurrentQuestion = createSelector(
 export const selectAllAnswers = createSelector(
     selectState, 
     state => state.answers
+);
+
+export const selectIsDone = createSelector(
+    selectState, 
+    state => isQuizDone(state)
 );
